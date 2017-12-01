@@ -40,12 +40,12 @@ public class StepDefs extends BaseSteps {
         stopWebDriver();
     }
 
-    @Given ("^user go to google site$")
+    @Given ("^User go to google site$")
     public void openGooglePage() {
         driver.navigate().to(GOOGLE_URL);
     }
 
-    @Given ("^user go to mine-portfolio site$")
+    @Given ("^User go to mine-portfolio site$")
     public void openSportsbookPage() {
         driver.navigate().to(SPORTSBOOK_URL);
     }
@@ -65,7 +65,7 @@ public class StepDefs extends BaseSteps {
         wait(1);
     }
 
-    @When("^the user enter correct credentials$")
+    @When("^The user enter correct credentials$")
     public void userLogin() {
         login("user@test.com", "password1");
     }
@@ -90,7 +90,7 @@ public class StepDefs extends BaseSteps {
         wait(1);
     }
 
-    @Then("^page show '(.*?)'$")
+    @Then("^Page show '(.*?)'$")
     public void verifyBetRecipt(String elementText) {
         WebElement element = driver.findElement(RECEIPT_HEADER);
         assertEquals(elementText, element.getText());
