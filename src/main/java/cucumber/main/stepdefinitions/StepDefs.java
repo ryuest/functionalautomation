@@ -40,12 +40,12 @@ public class StepDefs extends BaseSteps {
         stopWebDriver();
     }
 
-    @Given ("^User go to google site$")
+    @Given("^User go to google site$")
     public void openGooglePage() {
         driver.navigate().to(GOOGLE_URL);
     }
 
-    @Given ("^User go to mine-portfolio site$")
+    @Given("^User go to mine-portfolio site$")
     public void openSportsbookPage() {
         driver.navigate().to(SPORTSBOOK_URL);
     }
