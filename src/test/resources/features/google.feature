@@ -1,7 +1,7 @@
 @all
 Feature: Google Search
 
-   @Google
+  @Google
   Scenario: Navigation to google page
     Given user go to google site
     When Do search
