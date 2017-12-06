@@ -9,6 +9,8 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -48,6 +50,20 @@ public class StepDefs extends BaseSteps {
     @Given("^User go to mine-portfolio site$")
     public void openSportsbookPage() {
         driver.navigate().to(SPORTSBOOK_URL);
+    }
+
+    @Given("^job$")
+    public void countEdinburgh() {
+        String city = "Edinburgh";
+        driver.navigate().to("https://www.heathrow.com/arrivals");
+        List<WebElement> flights = driver.findElement(By.id("arrivadatagrid")).findElements(By.tagName("tr"));
+        int count = 0;
+        for (int a = 0; a < flights.size(); a++) {
+            if (flights.get(a).getText().contains(city)) {
+                count++;
+            }
+        }
+        System.out.println(city + "flights:" + count);
     }
 
     @Given("^Enter search term '(.*?)'$")
