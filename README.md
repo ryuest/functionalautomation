@@ -21,6 +21,9 @@ To build install and start
 mvn clean install -Dtest=TestRunner "-Dcucumber.options= --tags @All"
 ```
 
+JUNIT Class: cucumber.test.TestRunner and VM Options: "-Dcucumber.options=--tags @all"
+```
+
 ## Built With
 
 * [Cucumber](https://cucumber.io/) - for Behaviour-Driven Development, executes your .feature files, and those files contain executable specifications written in a language called Gherkin
