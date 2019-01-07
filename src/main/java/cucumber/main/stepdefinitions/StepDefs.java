@@ -106,8 +106,8 @@ public class StepDefs extends BaseSteps {
         wait(1);
     }
 
-    @Then("^Page show '(.*?)'$")
-    public void verifyBetRecipt(String elementText) {
+    @Then("^Page show (is|is not) '(.*?)'$")
+    public void verifyBetRecipt(String Displayed, String elementText) {
         WebElement element = driver.findElement(RECEIPT_HEADER);
         assertEquals(elementText, element.getText());
     }

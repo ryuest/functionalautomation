@@ -8,7 +8,7 @@ Feature: Sportstbook
     When Click selection
     When Add Stake
     When Place the bet
-    Then Page show 'Bet Placed!'
+    Then Page show is 'Bet Placed!'
 
 
   @Test

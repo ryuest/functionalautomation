@@ -11,13 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseSteps {
 
-    private static final String WEB_DRIVER_FOLDER = "src\\test\\resources\\drivers\\chromedriver.exe";
-
     protected WebDriver driver;
     protected WebDriverWait wait;
 
     protected void startWebDriver() {
-        System.setProperty("webdriver.chrome.driver", WEB_DRIVER_FOLDER);
         driver = new ChromeDriver();
     }
 
