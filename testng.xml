@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testng Cucumber Suite" parallel="classes" data-provider-thread-count="5">
+
+    <test name="Run All Tests EN">
+        <parameter name="language" value="de"/>
+        <classes>
+            <class name="cucumber.test.TestRunner"/>
+            <!--<class name="main.TestRunner"></class>-->
+            <!-- <class name="main.AnotherRunner"></class> This class could be used to run multiple runner classes-->
+        </classes>
+    </test> <!-- Test -->
+
+    <!--<test name="Run All Tests DE">-->
+        <!--<parameter name="language" value="de"/>-->
+        <!--<classes>-->
+            <!--<class name="main.CucumberRunner"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+<!--    <test name="Run All Tests BrowserStack Safari">
+        <parameter name="language" value="de"/>
+        <parameter name="browserType" value="Safari"/>
+        <parameter name="browserVersion" value="12.0"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="osVersion" value="Mojave"/>
+        <classes>
+            <class name="main.CucumberRunnerBrowserstack"/>
+        </classes>
+    </test>-->
+
+</suite> <!-- Suite -->
