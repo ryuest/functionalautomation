@@ -23,6 +23,8 @@ public class StepDefs extends BaseSteps {
 
     private final By GOOGLE_LINKS_LIST = By.cssSelector("._NId");
 
+    private final By GOOGLE_SEARCH = By.cssSelector("input[role='combobox']");
+
     private final String GOOGLE_URL = "https://www.google.com";
 
     private final String SPORTSBOOK_URL = "https://ryuest.github.io/mine-portfolio-final/";
@@ -31,19 +33,15 @@ public class StepDefs extends BaseSteps {
 
     private final By RECEIPT_HEADER = By.cssSelector(".betslip-receipt_header-text");
 
-    @Before
-    public void before() {
-        startWebDriver();
-    }
-
-    @After
-    public void after() {
-        stopWebDriver();
-    }
 
     @Given("^User go to google site$")
     public void openGooglePage() {
         driver.navigate().to(GOOGLE_URL);
+    }
+
+    @Given("^User go to mine site$")
+    public void openMinePage() {
+        driver.navigate().to("https://www.google.co.uk/");
     }
 
     @Given("^User go to mine-portfolio site$")
@@ -73,10 +71,10 @@ public class StepDefs extends BaseSteps {
 
     @When("^Do search$")
     public void clickSearchButton() {
-        driver.findElement(By.id("lst-ib")).click();
-        driver.findElement(By.id("lst-ib")).sendKeys("football");
+        driver.findElement(GOOGLE_SEARCH).click();
+        driver.findElement(GOOGLE_SEARCH).sendKeys("football");
         wait(1);
-        driver.findElement(By.className("lsb")).click();
+        driver.findElement(By.xpath("//center/input[contains(@aria-label, 'Googl')]")).click();
         wait(1);
     }
 

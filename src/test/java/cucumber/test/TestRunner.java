@@ -8,9 +8,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {"src/test/resources/features/"},
-        glue = {"cucumber.main.stepdefinitions"},
+        glue = {"cucumber.main.stepdefinitions", "config"},
         plugin = {"pretty", "json:target/cucumber-report/report.json"},
-        tags = {"@Google"},
+        tags = {"@Google2"},
         monochrome = true)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
