@@ -71,6 +71,7 @@ public class StepDefs extends BaseSteps {
 
     @When("^Do search$")
     public void clickSearchButton() {
+        driver.findElement(By.cssSelector("div[role='presentation']")).click();
         driver.findElement(GOOGLE_SEARCH).click();
         driver.findElement(GOOGLE_SEARCH).sendKeys("football");
         wait(1);
